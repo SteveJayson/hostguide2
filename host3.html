@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hygiene copy-paste host guide -Steve</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 15px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            font-size: 22px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        p {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        .message-row {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Space between text and button */
+            margin-bottom: 8px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .message-text {
+            flex-grow: 1;
+            /* Ensure the text container is compact */
+            min-width: 0; 
+        }
+        textarea {
+            width: 100%;
+            height: 28px; /* Very small height for text */
+            padding: 5px;
+            border: none;
+            resize: none;
+            box-sizing: border-box;
+            font-size: 12px; /* Smallest text size for compactness */
+            line-height: 18px;
+            background-color: transparent;
+            cursor: default;
+            color: #333;
+            overflow: hidden; /* Hide scrollbar if text is too long */
+            white-space: nowrap; /* Keep text in one line */
+            text-overflow: ellipsis; /* Add "..." if text is cut off */
+        }
+        .copy-btn {
+            /* Large, easy-to-click button */
+            width: 80px; 
+            height: 38px; 
+            padding: 0;
+            background-color: #28a745; /* Green for "Go/Success" */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px; /* Default font size for button text */
+            font-weight: bold;
+            line-height: 38px;
+            text-align: center;
+            flex-shrink: 0; /* Prevents shrinking */
+            transition: background-color 0.1s, transform 0.05s;
+            text-transform: uppercase;
+        }
+        .copy-btn:hover {
+            background-color: #218838;
+        }
+        .copy-btn:active {
+            background-color: #1e7e34;
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hygiene host guide copy-pate -Steve</h1>
+    <p>Customized by Steve</p>
+
+    <script>
+        function copyText(elementId, buttonElement) {
+            const copyTextarea = document.getElementById(elementId);
+            
+            // Use the Clipboard API to copy the text
+            navigator.clipboard.writeText(copyTextarea.value.trim()).then(() => {
+                // Change button text briefly for feedback
+                const originalText = buttonElement.textContent;
+                buttonElement.textContent = 'COPIED!';
+                buttonElement.style.backgroundColor = '#007bff'; // Change color to blue for feedback
+                
+                setTimeout(() => {
+                    buttonElement.textContent = originalText;
+                    buttonElement.style.backgroundColor = '#28a745'; // Reset color to green
+                }, 1000); // Reset button text after 1 second
+                
+            }).catch(err => {
+                console.error('Could not copy text: ', err);
+                alert('Failed to copy text. Please select the text manually.');
+            });
+        }
+    </script>
+    <p>Only use this for S2 right after joined</p>
+     <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg1">sessionstatus waiting</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg3', this)">Copy</button>
+    </div>
+    <p><-------------------------------------------------------></p>
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg2">pm admins 👋| Hello, everyone! I'm Steve I will be your host for todays session 12pm EST, please head to staff room and wait to get logged!</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg2', this)">Copy</button>
+    </div>
+    
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg3">stickymessage [👋] Salutations Staff! Welcome to the 12pm EST training, PTS will be enabled soon. | Host: Stevethegameryt </textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg3', this)">Copy</button>
+    </div>
+    
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg4">👋| Hello! Welcome to my session, Guides open? And what is your prefer role?</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg4', this)">Copy</button>
+    </div>
+    <p>Before unslocking and the rest of command for S1 xx:50 for S2 xx:59 or as soon S1 is full</p>
+     <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg5">unslock</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg5', this)">Copy</button>
+    </div>
+
+     <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg6">sessionstatus open</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg6', this)">Copy</button>
+    </div>
+
+     <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg7">announcetraining</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg7', this)">Copy</button>
+    </div>
+    <p>For S1 wait for xx:55 for pts and for S2 xx:00</p>
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg8">sm Welcome to the 8am EST training session! You will be given 4 minutes to ask any questions you might have. State "!pts" in the chat and a member of our staff will approach you to assist you.</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg8', this)">Copy</button>
+    </div>
+    
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg9">!pts</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg9', this)">Copy</button>
+    </div>
+    
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg10">sm The countdown has now ended. Trainees, please remain on the white lines. Trainers, please make your way back to the stage to commence the session.</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg10', this)">Copy</button>
+    </div>
+    
+    <p>Before slocking for S1 xx:00 and for S2 xx:05</p>
+
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg11">:slock</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg11', this)">Copy</button>
+    </div>
+    
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg12">:sessionstatus started</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg12', this)">Copy</button>
+    </div>
+    
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg13">sm [👋]Greetings, everyone! Welcome to the training session. Before we start, we would like to go over some vital information that will help you during this session.</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg13', this)">Copy</button>
+    </div>
+    
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg14">sm l. Be respectful and courteous towards your trainers and assistants, as they are taking valuable time out of their day to train you.</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg14', this)">Copy</button>
+    </div>
+    
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg15">sm ll. Please alert your trainer before going AFK. Failure to do so will result in a dismissal from this session.</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg15', this)">Copy</button>
+    </div>
+    
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg16">sm lll. Trolling within our training sessions is not allowed, doing so will have you dismissed. </textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg16', this)">Copy</button>
+    </div>
+    
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg17">sm lV. Please avoid discussing the answers with others during the trivia. If caught, it could result in dismissal.</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg17', this)">Copy</button>
+    </div>
+    
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg18">sm [📝]Our procedures guide can be found in our communications server, it can be opened at any time during this training. It is advised for you to review them before performing them on clients.</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg18', this)">Copy</button>
+    </div>
+    
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg19">sm [📋]Grammar is not required at the dentist. However, it is recommended that you use it if you'd like to become an MR+.</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg19', this)">Copy</button>
+    </div>
+    
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg20">sm [🏁]We have now finished going over the rules. Please ensure you are following them. Trainers, you may head to your groups. Trainees, please be patient while you are teleported to your groups.</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg20', this)">Copy</button>
+    </div>
+    
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg21">pm admins Please proceed to your stations.</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg21', this)">Copy</button>
+    </div>
+    
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg23">pm admins 💬| Hello everyone! I’m your host, Steve! I’ll be sending a total of three check-ups throughout today’s training session. Stay focused, do your best, and good luck to all and have a good session!</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg23', this)">Copy</button>
+    </div>
+    
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg24">pm admins [🔃] First Check-Up! You should be nearing the end of your trivia stage by now. Keep up the great energy you’re all doing amazing so far!</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg24', this)">Copy</button>
+    </div>
+    
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg25">pm admins [🧩] Second Check-Up! You should now be at the demonstration/roleplay stage by now. Everything’s coming together wonderfully keep showing that teamwork and professionalism!</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg25', this)">Copy</button>
+    </div>
+    
+    <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg26">pm admins [🏁] Final Check-Up! Demo session should be close to finishing! You’ve all done an incredible job today. Where should we take our group photo? Stage, trivia room, demo room.</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg26', this)">Copy</button>
+    </div>
+    <p>Use this right after the session ends</p>
+     <div class="message-row">
+        <div class="message-text">
+            <textarea readonly id="msg27">sessionstatus remove</textarea>
+        </div>
+        <button class="copy-btn" onclick="copyText('msg27', this)">Copy</button>
+    </div>
+</body>
+</html>
